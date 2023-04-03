@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;1,300&family=Oswald&display=swap');
+
+/*Fonts:
+font-family: 'Merriweather', serif;
+font-family: 'Oswald', sans-serif;
+*/
+
+/*Global*/
+
+$color-main: #f9ca24;
+$accent-color: #bdc3c7;
+$font-text: 'Merriweather', serif;
+$font-header: 'Oswald', sans-serif;
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+h1 {
+    font-family: $font-header;
+    font-size: 50px;
+    line-height: 0.5;
+}
+
+h3 {
+    font-family: $font-text;
+    font-style: italic;
+    color: $accent-color;
+    font-weight: 300;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*Navigation*/
+li>a {
+    font-family: $font-header;
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+}
+
+.logo {
+    width: 100px;
+    height: 50px;
+}
+
+.nav-links {
+    list-style-type: none;
+}
+
+.nav-links li {
+    display: inline-block;
+    padding: 0 30px;
+}
+
+.nav-links li a {
+    transition: all 0.3s ease 0s;
+    color: #fff;
+    text-shadow: 3px 4px 2px rgb(8, 8, 8);
+}
+
+.nav-links li a:hover {
+    color: $color-main;
+}
+
+/*Splash-Page*/
+.splash {
+    position: relative;
+    height: 100vh;
+    background-image: url('../images/pexels-vlada-karpovich-4452374.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.splash-inner {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.page-title {
+    color: #fff;
+    font-size: 50px;
+    font-family: $font-text;
+    font-style: italic;
+    position: relative;
+    margin: 55px 0 0 0;
+    text-shadow: 0px 3px 10px #000;
+}
+
+.page-subtitle {
+    color: #fff;
+    font-family: $font-header;
+    font-size: 120px;
+    text-shadow: 0px 3px 10px #000;
+}
+
+.splash-btn {
+    min-width: 160px;
+    padding: 20px 60px;
+    border-radius: 5px;
+    background-color: $color-main;
+    color: #fff;
+    font-family: $font-header;
+    font-size: 30px;
+    border: none;
+}
+
+.splash-btn:hover {
+    background-color: #fff;
+    color: $color-main;
+    transition: all 0.7s;
+    cursor: pointer;
+}
+
+/*Services*/
+.services {
+    margin: 96px;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.box {
+    flex: 0 0 33.333%;
+    line-height: 1.5;
+}
+
+.services i {
+    font-size: 35px;
+    color: $color-main;
+    border: 3px solid $color-main;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    line-height: 60px;
+}
+
+.services h2 {
+    font-family: $font-header;
+}
+
+.services p {
+    font-family: $font-text;
+    font-size: 15px;
+    color: #7c7a7a;
+}
+
+/*Portfolio*/
+
+.portfolio {
+    background-color: #ecf0f1;
+
+}
+
+.portfolio-box img {
+    height: 300px;
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.portfolio-box img:hover {
+    transform: scale(0.90);
+    transition: all 0.5s;
+}
+
+.portfolio .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 50px 30px;
+    grid-auto-flow: row;
+}
+
+.portfolio-box {
+    background-color: #fff;
+}
+
+.portfolio .section-title h1 {
+    padding-top: 100px;
+}
+
+.box-content {
+    line-height: 0.5;
+    padding: 10px;
+}
+
+.box-content h2 {
+    font-family: $font-header;
+}
+
+.box-content p {
+    font-family: $font-text;
+    font-style: italic;
+}
+
+/*Footer*/
+
+.footer-section {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.footer-list {
+    list-style-type: none;
+    display: flex;
+    text-align: center;
+    padding-left: 0;
+}
+
+.copyright i {
+    font-size: 15px;
+}
+
+.copyright p {
+    display: inline-block;
+    padding-right: 200px;
+    font-family: $font-text;
+    font-size: 15px;
+}
+
+.footer-list a i {
+    font-size: 20px;
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    line-height: 40px;
+    margin: 0 5px;
+}
+
+.footer-list a i:hover {
+    transform: scale(1.2);
+}
+
+.footer-icon p {
+    font-size: 0;
+}
+
+/*Media queries*/
+
+@media(max-width: 767px) {
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 15px 20px;
+    }
+
+    .logo {
+        display: block;
+
+    }
+
+    li>a {
+        font-size: 12px;
+    }
+
+    .nav-links {
+        padding-left: 5px;
+    }
+
+    .nav-links li {
+        padding: 0 5px;
+    }
+
+    .page-title {
+        font-size: 20px;
+    }
+
+    .page-subtitle {
+        font-size: 50px;
+        margin: 100px 0;
+    }
+
+    .splash-btn {
+        padding: 10px 30px;
+        border-radius: 5px;
+        font-size: 20px;
+    }
+
+    .services {
+        margin: 20px;
+    }
+
+    .services i {
+        font-size: 20px;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        line-height: 45px;
+    }
+
+    .portfolio .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: 15px 20px;
+    }
+
+    .copyright p {
+        padding-right: 5px;
+        font-size: 10px;
+    }
+
+    .copyright i {
+        font-size: 10px;
+    }
+
+    .footer-list a i {
+        font-size: 10px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        line-height: 30px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h3 {
+        font-size: 15px;
+    }
+}
